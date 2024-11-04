@@ -1,12 +1,21 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Home from './components/Home';
+import Login from './components/Login';
+import Signup from './components/Signup';
 function App() {
 return (
 <>
-<p>Home page</p>
+<Router>
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/Login' element={<Login/>}/>
+    <Route path='/Signup' element={<Signup/>}/>
+
+
+  </Routes>
+
+</Router>
 
 </>
 );
